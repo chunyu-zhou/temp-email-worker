@@ -1,0 +1,11 @@
+name = "temp-email-worker"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "temp-email-db"
+database_id = "c3240e65-3265-4897-b3b4-8f83951ddc32"
+
+[triggers]
+crons = ["0 * * * *"] # 每小时执行一次，检查并清理超过48小时的数据
